@@ -1,0 +1,31 @@
+flowchart TD
+    A[Data Collection] --> B[Data Exploration & Visualization]
+    B --> C[Data Cleaning & Preprocessing]
+    C --> D[Feature Engineering]
+    
+    D --> E[Data Splitting: Training/Testing Sets]
+    E --> F[Feature Scaling]
+    
+    F --> G[Model Selection]
+    G --> H[Training Multiple Models]
+    H --> I[Model Evaluation]
+    I --> J{Best Model?}
+    
+    J -- No --> G
+    J -- Yes --> K[Hyperparameter Tuning]
+    K --> L[Final Model Evaluation]
+    L --> M[Model Deployment]
+    
+    M --> N[Model Usage/Inference]
+    M --> O[Model Monitoring]
+    O --> P{Performance Degradation?}
+    P -- Yes --> B
+    P -- No --> N
+    
+    classDef process fill:#ffffff,stroke:#0066cc,stroke-width:2px;
+    classDef decision fill:#ffffff,stroke:#994d00,stroke-width:2px;
+    classDef endpoint fill:#ffffff,stroke:#2d6a00,stroke-width:2px;
+    
+    class A,B,C,D,E,F,G,H,I,K,L,M,N,O process;
+    class J,P decision;
+    class A,M,N endpoint;
