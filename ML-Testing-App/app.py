@@ -1,8 +1,9 @@
 """
-ML Testing Dashboard
+ML Testing Dashboard - Attempt by a Tester for Testers
 -------------------
-A comprehensive testing suite for machine learning models
-focused on KNN classification with the Iris dataset.
+A comprehensive yet evolving (and certainly buggy as well) testing suite for machine learning models
+focused on KNN classification with the Iris dataset. 
+I extensively used LLMs (Anthropic Sonnet 3.7), Books, Perplexity to reach here.
 """
 
 import streamlit as st
